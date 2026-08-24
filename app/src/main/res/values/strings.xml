@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">AnyConvertPro</string>
+    <string name="converter_subtitle">Convert values and learn how each unit relates to its SI base.</string>
+    <string name="input_value">Value</string>
+    <string name="from_unit">From</string>
+    <string name="to_unit">To</string>
+    <string name="swap_units">Swap units</string>
+    <string name="result_label">Result</string>
+    <string name="invalid_number">Enter a valid number</string>
+    <string name="learn_title">How it works</string>
+
+    <string name="category_length">Length</string>
+    <string name="category_mass">Mass</string>
+    <string name="category_temperature">Temperature</string>
+    <string name="category_volume">Volume</string>
+    <string name="category_area">Area</string>
+    <string name="category_speed">Speed</string>
+
+    <string name="lesson_length">Length conversions use the meter as the SI base. Multiply by a fixed factor to reach meters, then divide by the target unit’s factor. A mile is exactly 1,609.344 meters.</string>
+    <string name="lesson_mass">Mass conversions use the kilogram. Imperial units are defined exactly: 1 pound is 0.45359237 kg, and 1 ounce is 1/16 of a pound.</string>
+    <string name="lesson_temperature">Temperature is not a simple scale factor. Convert through Celsius: F = C × 9/5 + 32, and K = C + 273.15. Absolute zero is 0 K (−273.15 °C).</string>
+    <string name="lesson_volume">Volume conversions use the liter (0.001 m³). A US liquid gallon is exactly 3.785411784 liters. 1 milliliter equals 1 cubic centimeter.</string>
+    <string name="lesson_area">Area conversions use the square meter. An acre is 4,046.8564224 m², and a hectare is 10,000 m² (a 100 m × 100 m square).</string>
+    <string name="lesson_speed">Speed conversions use meters per second. Divide km/h by 3.6 to get m/s. A knot is one nautical mile (1,852 m) per hour.</string>
+
+    <string name="unit_meter">Meter</string>
+    <string name="unit_kilometer">Kilometer</string>
+    <string name="unit_centimeter">Centimeter</string>
+    <string name="unit_millimeter">Millimeter</string>
+    <string name="unit_mile">Mile</string>
+    <string name="unit_yard">Yard</string>
+    <string name="unit_foot">Foot</string>
+    <string name="unit_inch">Inch</string>
+    <string name="unit_kilogram">Kilogram</string>
+    <string name="unit_gram">Gram</string>
+    <string name="unit_milligram">Milligram</string>
+    <string name="unit_pound">Pound</string>
+    <string name="unit_ounce">Ounce</string>
+    <string name="unit_tonne">Tonne</string>
+    <string name="unit_celsius">Celsius</string>
+    <string name="unit_fahrenheit">Fahrenheit</string>
+    <string name="unit_kelvin">Kelvin</string>
+    <string name="unit_liter">Liter</string>
+    <string name="unit_milliliter">Milliliter</string>
+    <string name="unit_cubic_meter">Cubic meter</string>
+    <string name="unit_gallon">US gallon</string>
+    <string name="unit_quart">US quart</string>
+    <string name="unit_cup">US cup</string>
+    <string name="unit_fluid_ounce">US fluid ounce</string>
+    <string name="unit_square_meter">Square meter</string>
+    <string name="unit_square_kilometer">Square kilometer</string>
+    <string name="unit_hectare">Hectare</string>
+    <string name="unit_acre">Acre</string>
+    <string name="unit_square_foot">Square foot</string>
+    <string name="unit_square_inch">Square inch</string>
+    <string name="unit_meters_per_second">Meters per second</string>
+    <string name="unit_kilometers_per_hour">Kilometers per hour</string>
+    <string name="unit_miles_per_hour">Miles per hour</string>
+    <string name="unit_knot">Knot</string>
+</resources>
