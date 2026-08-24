@@ -19,10 +19,12 @@ jobs:
           cache: gradle
 
       - name: Decode Keystore
-        run: echo "${{ secrets.KEYSTORE_FILE }}" | base64 --decode > app/release.jks
+        run: |
+          echo "${{ secrets.KEYSTORE_FILE }}" > keystore.base64
+          base64 -d keystore.base64 > app/release.jks
 
       - name: Build Release AAB
-        run: ./gradlew app:bundleRelease
+        run: ./gradlew app:bundleRelease --stacktrace
         env:
           KEYSTORE_PATH: release.jks
           KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
