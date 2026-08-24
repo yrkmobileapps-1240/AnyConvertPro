@@ -1,3 +1,9 @@
 <resources>
     <style name="Theme.AnyConvertPro" parent="android:Theme.Material.Light.NoActionBar" />
+
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_launcher_foreground</item>
+        <item name="windowSplashScreenBackground">@color/primary</item>
+        <item name="postSplashScreenTheme">@style/Theme.AnyConvertPro</item>
+    </style>
 </resources>

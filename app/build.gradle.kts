@@ -19,16 +19,18 @@ android {
 
     signingConfigs {
         create("release") {
-            val keystorePath = System.getenv("KEYSTORE_PATH")
-            val keystorePassword = System.getenv("KEYSTORE_PASSWORD")
-            val keyAliasName = System.getenv("KEY_ALIAS")
-            val keyPasswordValue = System.getenv("KEY_PASSWORD")
-
-            if (keystorePath != null && keystorePassword != null) {
-                storeFile = file(keystorePath)
-                storePassword = keystorePassword
-                keyAlias = keyAliasName
-                keyPassword = keyPasswordValue
+            val isCI = System.getenv("GITHUB_ACTIONS") == "true"
+            if (isCI) {
+                storeFile = file(System.getenv("KEYSTORE_PATH") ?: "release.jks")
+                storePassword = System.getenv("KEYSTORE_PASSWORD")
+                keyAlias = System.getenv("KEY_ALIAS")
+                keyPassword = System.getenv("KEY_PASSWORD")
+            } else {
+                // Local build configuration
+                storeFile = file("/Users/ravi/anyconvertpro.jks")
+                storePassword = "AnyConvert2026"
+                keyAlias = "anyconvert_key"
+                keyPassword = "AnyConvert2026"
             }
         }
     }
@@ -54,6 +56,7 @@ android {
 }
 
 dependencies {
+    implementation(libs.androidx.core.splashscreen)
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.compose.material.icons.extended)
