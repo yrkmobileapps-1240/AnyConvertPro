@@ -23,6 +23,9 @@ jobs:
           echo "${{ secrets.KEYSTORE_FILE }}" > keystore.base64
           base64 -d keystore.base64 > app/release.jks
 
+      - name: Save Service Account
+        run: echo '${{ secrets.SERVICE_ACCOUNT_JSON }}' > service_account.json
+
       - name: Build Release AAB
         run: ./gradlew app:bundleRelease --stacktrace
         env:
@@ -34,7 +37,7 @@ jobs:
       - name: Upload to Play Store
         uses: r0adkll/upload-google-play@v1
         with:
-          serviceAccountJson: ${{ secrets.SERVICE_ACCOUNT_JSON }}
+          serviceAccountJson: service_account.json
           packageName: com.yaganti.anyconvertpro
           releaseFiles: app/build/outputs/bundle/release/app-release.aab
           track: internal
